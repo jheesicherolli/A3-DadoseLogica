@@ -2,7 +2,6 @@ package A3_ATENDIMENTOBANCARIO;
 
 
 import java.util.Random;
-
 public class Atendimento {
 
     //Utilizando o Random para gerar números aleatórios
@@ -42,6 +41,7 @@ public class Atendimento {
         int depositos = 0;
         int pagamentos = 0;
         listaGuiches.tamanho();
+
         //Variáveis aritiméticas 
         int totalClientes = 0;
         int somaEspera = 0;
@@ -59,13 +59,14 @@ public class Atendimento {
         int tempoExpedienteCorrido = 0;
         int tempoExtra = 0;
 
-        while (tempoExpedienteCorrido <= 21600 || !filaClientes.filaEstaVazia()) { //While representa o expediente total 
+        while (tempoExpedienteCorrido <= 21600 || !filaClientes.filaEstaVazia()) { // While representa o expediente total 
             //Se está dentro do expediente ou a fila não está vazia
 
             if (tempoExpedienteCorrido > 21600) { //Tempo extra
                 tempoExtra++;
             }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /* -------------------------- */
             if (tempoExpedienteCorrido <= 21600) { //Impedir a chegada de clientes depois do fim do expediente
 
                 if (chegouCliente()) {
@@ -73,7 +74,10 @@ public class Atendimento {
                     totalClientes++;
                 }
             }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /* -------------------------- */
+
+
             if (guicheLivre(listaGuiches) && !filaClientes.filaEstaVazia()) { 
                 //A função guicheLivre irá percorrer todos os Guiches e irá chamar a função ".checar()"
                 //E para a condição ser verdadeira alguns dos guiches precisam estar livres e a fila deve estar vazia
@@ -111,7 +115,9 @@ public class Atendimento {
                     }
                 }
             }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            /* -------------------------- */
+
             for (int indice = 0; indice <= listaGuiches.tamanho() -1; indice++) {
                 if (listaGuiches.obter(indice).livre == false && tempoExpedienteCorrido == listaGuiches.obter(indice).tempoOcupado) {
                     listaGuiches.obter(indice).livre = true;  //Se o cliente terminou a transação, o guichê fica livre
@@ -121,7 +127,7 @@ public class Atendimento {
             tempoExpedienteCorrido++;
 
         }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /* -------------------------- */
         if (totalClientes > 0) {
             mediaEspera = somaEspera / totalClientes;
         }
@@ -134,8 +140,9 @@ public class Atendimento {
         int segundosExtra = (int) tempoExtra % 60;
         tempoExtra /= 60;
         int minutosExtra = (int) tempoExtra % 60;
+
+        /* -------------------------- */
         
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Resultados
         System.out.println("Número total de clientes: " + totalClientes + ".");
         System.out.println("Número de clientes que fizeram saque: " + saques + ".");

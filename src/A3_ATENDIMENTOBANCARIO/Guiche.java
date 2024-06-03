@@ -1,7 +1,7 @@
 package A3_ATENDIMENTOBANCARIO;
 
 
-//A classe Guiche é utilizada para indicar o estado do guichê
+//Uilizada para indicar o estado do guichê
 
 public class Guiche {
 

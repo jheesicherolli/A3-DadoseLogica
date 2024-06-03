@@ -1,11 +1,7 @@
 package A3_ATENDIMENTOBANCARIO;
 
-/*
-A classe No foi utilizada para compor
-a fila dinâmica de objetos, nesse caso, clientes
-*/
-
 public class Node {
+    //amarra os clientes, cria novos clientes e intancia a hora de entrada
 
     public Cliente cliente = new Cliente();
     public Node next;

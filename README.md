@@ -67,8 +67,6 @@ A classe Guiche possui dois atributos:
 O construtor inicializa livre com o valor passado como parâmetro e tempoOcupado com 0, indicando que o guichê não está ocupado inicialmente.
 
 
-#### IFilaCliente
-
 #### ListaGuiche
 
 A classe ListaGuiche possui quatro atributos: 

@@ -90,3 +90,10 @@ A classe ListaGuiche possui quatro atributos:
 O projeto foi estruturado em um pacote contendo todas as classes. 
 
 Para utilizar do sistema compile o arquivo `Atendimento`.
+
+# Conclusão
+
+Através deste trabalho, conseguimos criar uma simulação realista do atendimento em uma agência bancária considerando eventos essenciais de modo a permitir calcular métricas importantes para a gestão do atendimento na agência.
+
+Usar um cenário verossímil nos permitiu ter a percepção da importância de uma boa estrutura e planejamento na programação, além de vislumbrar resultados práticos.
+
